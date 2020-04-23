@@ -1,0 +1,17 @@
+{
+  "name": "@ursi/jim",
+  "version": "0.1.0",
+  "description": "JavaScript in Elm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "elm",
+    "interop"
+  ],
+  "author": "Mason Mackaman",
+  "license": "ISC"
+}
