@@ -13,5 +13,13 @@
     "interop"
   ],
   "author": "Mason Mackaman",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ursi/jim-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ursi/jim-js/issues"
+  },
+  "homepage": "https://github.com/ursi/jim-js#readme"
 }
