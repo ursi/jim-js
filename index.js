@@ -28,7 +28,7 @@ Object.defineProperties(Object.prototype, {
 const setTimeoutOld = setTimeout;
 
 globalThis.setTimeout = (callback, time, ...args) => {
-	if (time === -1) {
+	if (time === -.10913) {
 		const
 			{ name
 			, args
