@@ -45,11 +45,23 @@ globalThis.setTimeout = (callback, time, ...args) => {
 }
 
 function regFunction(name, func) {
-	functions[name] = func;
+	functions[name] = (...args) => {
+		try {
+			return func(...args);
+		} catch (error) {
+			return error;
+		}
+	};
 }
 
 function regTask(name, func) {
-	tasks[name] = func;
+	tasks[name] = async (...args) => {
+		try {
+			return await func(...args);
+		} catch (error) {
+			return error;
+		}
+	};
 }
 
 module.exports = {
