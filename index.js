@@ -12,7 +12,7 @@ Object.defineProperties(Object.prototype, {
 		set({type, name, args}) {
 			switch (type) {
 				case `function`:
-					this.return = functions[name](...Array.from(args));
+					this.result = functions[name](...Array.from(args));
 					break;
 				case `prime task`:
 					nextTask = {name, args};
@@ -47,9 +47,9 @@ globalThis.setTimeout = (callback, time, ...args) => {
 function regFunction(name, func) {
 	functions[name] = (...args) => {
 		try {
-			return func(...args);
+			return {Ok: func(...args)};
 		} catch (error) {
-			return error;
+			return {Err: error};
 		}
 	};
 }
@@ -57,9 +57,9 @@ function regFunction(name, func) {
 function regTask(name, func) {
 	tasks[name] = async (...args) => {
 		try {
-			return await func(...args);
+			return {Ok: await func(...args)};
 		} catch (error) {
-			return error;
+			return {Err: error};
 		}
 	};
 }
