@@ -49,6 +49,7 @@ function regFunction(name, func) {
 		try {
 			return {Ok: func(...args)};
 		} catch (error) {
+			console.error(error);
 			return {Err: error};
 		}
 	};
@@ -59,6 +60,7 @@ function regTask(name, func) {
 		try {
 			return {Ok: await func(...args)};
 		} catch (error) {
+			console.error(error);
 			return {Err: error};
 		}
 	};
