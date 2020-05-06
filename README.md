@@ -21,5 +21,5 @@ Attach a function to a Jim fuction
 - The first value is a string used to identity the function in Jim.
 - The second value is a syncronous function whose return value will be decoded in Jim.
 */
-Jim.function(`my function`, myFunction);
+jim.function(`my function`, myFunction);
 ```
