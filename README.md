@@ -8,10 +8,18 @@ Install: `npm install @ursi/jim`
 // import
 const jim = require(`@ursi/jim`);
 
-// attach a function to a Jim task
-// this requires a string and a function that returns a promise
+/*
+Attach a function to a Jim task
+- The first value is a string used to identity the function in Jim.
+- The second value is a function whose return value will be decoded in Jim.
+  if the return value is a promise, the task will complete when it settles.
+*/
 jim.task(`my task`, myTask);
 
-// attack a function to a Jim function
+/*
+Attach a function to a Jim fuction
+- The first value is a string used to identity the function in Jim.
+- The second value is a syncronous function whose return value will be decoded in Jim.
+*/
 Jim.function(`my function`, myFunction);
 ```
