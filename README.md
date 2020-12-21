@@ -2,7 +2,7 @@ This is the JavaScript component for [Jim](https://github.com/ursi/jim)
 
 Install: `npm install @ursi/jim`
 
-# Use
+## Use
 
 ```javascript
 // import
